@@ -1,0 +1,13 @@
+[kwin]
+Window Above Other Windows=Meta+Num+7\tMeta+Num+Home,,
+Window Below Other Windows=Meta+Num+1\tMeta+Num+End,,
+Window Maximize=Meta+Num+9\tMeta+Num+PgUp,,
+Window Minimize=Meta+Num+3\tMeta+Num+PgDown,,
+Window Move Center=Meta+Num+5\tMeta+Num+Clear,,
+Window Pack Down=Meta+Num+2\tMeta+Num+Down,,
+Window Pack Left=Meta+Num+4\tMeta+Num+Left,,
+Window Pack Right=Meta+Num+6\tMeta+Num+Right,,
+Window Pack Up=Meta+Num+8\tMeta+Num+Up,,
+view_actual_size=Meta+Num+0\tMeta+Num+Ins,,
+view_zoom_in=Meta+Num++,,
+view_zoom_out=Meta+Num+-,,
