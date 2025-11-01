@@ -1,13 +1,21 @@
 # /etc/fstab: static file system information.
 #
-# Use blkid to print the universally unique identifier for a device. The UUID=
-# format can be used to name devices more robustly, ensuring they are mounted
-# correctly even after disks are added or removed. See fstab(5) for details.
+# Use the blkid command to print the universally unique identifier for
+# a device. The UUID= format should be used to reference devices more
+# robustly, ensuring they get mounted correctly even after other
+# devices are added and/or removed. See fstab(5) for details.
 #
-# /          was on /dev/nvme0n1p2 during the curtin installation.
-# /boot/efi/ was on /dev/nvme0n1p1 during the curtin installation.
-#
+# Any swap file used for saving resume images should not be listed
+# here. Instead, the swap file path should be passed to systemd
+# using the systemd.swap-extra= kernel parameter, only when
+# needed (for example, during regular boots). This allows
+# any saved image to be kept untouched by not passing a
+# swap file path (for example, during rescue boots).
+
+# [curtin] The filesystem for /          was written to /dev/nvme0n1p2 during Ubuntu installation.
+# [curtin] The filesystem for /boot/efi/ was written to /dev/nvme0n1p1 during Ubuntu installation.
+# ====================================================================================================
 # | device                                    | mount_point | fs_type | mount_options | dump | check |
-# |-------------------------------------------|-------------|---------|---------------|------|-------|
+# |===========================================|=============|=========|===============|======|=======|
     UUID=ca0883be-e260-44f0-a33f-56785ed8734e   /             ext4      defaults        0      1
     UUID=6A1C-C7D3                              /boot/efi/    vfat      defaults        0      2
